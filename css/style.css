@@ -1,9 +1,18 @@
+* {
+  box-sizing: border-box;
+}
+
 html, body {
   margin: 0;
   padding: 0;
 
   font-family: sans-serif;
   color: #fefefe;
+}
+
+a {
+  color: #fefefe;
+  text-decoration: none;
 }
 
 .parallax {
@@ -53,12 +62,61 @@ html, body {
 
 .content-container {
   width: 100vw;
-  background-color: rgba(0,0,0,0.5);
-  padding: 20vh 0 20vh 0;
-
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
+}
+
+.content-container--shaded {
+  background-color: rgba(0,0,0,0.5);
+  padding: 15vh 0 15vh 0;
+}
+
+.thoughts {
+  width: 75vw;
+  font-size: 130%;
+  text-shadow: 1px 0 1px #dddddd;
+}
+
+.gallery {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.gallery div {
+  position: relative;
+  border: 2px solid #eeeeee;
+  margin: 1em;
+}
+
+.gallery img {
+  width: 25vw;
+  height: 25vw;
+}
+
+.caption {
+  color: black;
+  padding-top: 1em;
+}
+
+.thumb-caption {
+  background: rgba(0, 0, 0, 0.3);
+  color: #fefefe;
+  text-decoration: none;
+
+  padding: 0.75em;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+}
+
+.contact-details {
+  font-size: 150%;
 }
 
 h1, h2, h3 {
@@ -67,11 +125,11 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size: 400%;
+  font-size: 10vw;
 }
 
 h2 {
-  font-size: 300%;
+  font-size: 8vw;
 }
 
 #section-one {
@@ -79,7 +137,7 @@ h2 {
 }
 
 #section-one .parallax__layer--base {
-  background-image: url(../pics/sammalkatto1.jpg);
+  background-image: url(../img/sammalkatto1.jpg);
 }
 
 #section-two {
@@ -87,7 +145,7 @@ h2 {
 }
 
 #section-two .parallax__layer--back {
-  background-image: url(../pics/sammalkatto2.jpg);
+  background-color: #5F5F23;
 }
 
 #section-three {
@@ -95,6 +153,6 @@ h2 {
 }
 
 #section-three .parallax__layer--base {
-  background-image: url(../pics/sammalkatto3.jpg);
+  background-image: url(../img/sammalkatto3.jpg);
 }
 }
