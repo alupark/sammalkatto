@@ -92,8 +92,11 @@ a {
 }
 
 .gallery img {
-  width: 30vh;
-  height: 30vh;
+  width: 25vw;
+  height: 25vw;
+
+  max-width: 30vh;
+  max-height: 30vh;
 }
 
 .caption {
@@ -127,6 +130,8 @@ a {
 h1, h2, h3 {
   flex: 1 100%;
   text-align: center;
+
+  text-shadow: 1px 0 1px #ccc;
 }
 
 h1 {
