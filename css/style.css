@@ -78,6 +78,13 @@ a {
   text-shadow: 1px 0 1px #dddddd;
 }
 
+@media only screen and (max-width: 768px) {
+  .thoughts {
+    width: 90vw;
+    font-size: 100%;
+  }
+}
+
 .gallery {
   display: flex;
   flex-flow: row wrap;
@@ -97,6 +104,16 @@ a {
 
   max-width: 30vh;
   max-height: 30vh;
+}
+
+@media only screen and (max-width: 768px) {
+  .gallery img {
+    width: 40vw;
+    height: 40vw;
+
+    max-width: 20vh;
+    max-height: 20vh;
+  }
 }
 
 .caption {
