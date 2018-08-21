@@ -8,6 +8,31 @@ html, body {
 
   font-family: sans-serif;
   color: #fefefe;
+
+  /* DELETE */
+  background-color: black;
+  /* DELETE */
+}
+
+h1, h2, h3 {
+  flex: 1 100%;
+  text-align: center;
+
+  text-shadow: 1px 0 1px #ccc;
+
+  margin: 0.5em;
+}
+
+h1 {
+  font-size: 10vw;
+}
+
+h2 {
+  font-size: 8vw;
+}
+
+h3 {
+  font-size: 4vw;
 }
 
 a {
@@ -15,61 +40,32 @@ a {
   text-decoration: none;
 }
 
-.parallax {
-  perspective: 300px;
-  height: 100vh;
-  overflow-x: hidden;
-  overflow-y: auto;
-  perspective-origin-x: 100%;
-}
-
-.parallax__group {
-  position: relative;
-  height: 100vh;
-  transform-style: preserve-3d;
-}
-
-.parallax__layer {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  transform-origin-x: 100%;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.parallax__layer--back {
-  transform: translateZ(-300px) scale(2);
-  z-index: 3;
-}
-
-.parallax__layer--base {
-  transform: translateZ(0);
-  z-index: 4;
-}
-
-.parallax__layer--fore {
-  transform: translateZ(90px) scale(0.7);
-  z-index: 1;
-}
-
-.content-container {
+section {
   width: 100vw;
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
 }
 
-.content-container--shaded {
-  background-color: rgba(0,0,0,0.5);
-  padding: 15vh 0 15vh 0;
+/* Hero START */
+
+.top-background  {
+  background-image: url(../img/sammalkatto1.jpg);
+}
+
+.section__hero {
+  background-color: rgba(0,0,0,0.3);
+  height: 100vh;
+  align-content: center;
+}
+
+.hero__header {
+  margin-bottom: 0;
+}
+
+.hero__ingress {
+  margin-top: 0;
+  font-size: 4vw;
 }
 
 .thoughts {
@@ -85,11 +81,21 @@ a {
   }
 }
 
+/* Hero END */
+
+/* Gallery START */
+
+.section__references {
+  background-color: #6c802f;
+  height: auto;
+  padding-bottom: 10vh;
+}
+
 .gallery {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  width: 100%;
+  width: 90vw;
 }
 
 .gallery div {
@@ -150,46 +156,95 @@ a {
   }
 }
 
+/* Gallery END */
+
+/* Contacts START */
+
+.bottom-background {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url(../img/sammalkatto3.jpg);
+}
+
+.contact-wrapper {
+  z-index: 2;
+  background-color: rgba(0,0,0,0.3);
+  width: 100%;
+  padding-bottom: 10vh;
+}
+
+.section__contact {
+  position: relative;
+}
+
+.contacts-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 90vw;
+}
+
+.contacts-container > * {
+  flex-basis: 0;
+  flex-grow: 1;
+  width: 33%;
+  margin: 0 5% 0 5%;
+}
+
 .contact-details {
   font-size: 150%;
 }
 
-h1, h2, h3 {
-  flex: 1 100%;
-  text-align: center;
-
-  text-shadow: 1px 0 1px #ccc;
+.profile-picture {
+  max-width: 300px;
 }
 
-h1 {
-  font-size: 10vw;
+@media only screen and (max-width: 768px) {
+  .contacts-container {
+    flex-wrap: wrap;
+  }
+
+  .contacts-container > * {
+    width: 100%;
+  }
+
+  .contact-details, .profile-picture {
+    max-width: 75%;
+  }
 }
 
-h2 {
-  font-size: 8vw;
+/* Contacts END */
+
+/* Parallax START */
+.parallax {
+  perspective: 300px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
-#section-one {
-  z-index: 5;
+.parallax__group {
+  position: relative;
+  height: 100vh;
+  transform-style: preserve-3d;
 }
 
-#section-one .parallax__layer--base {
-  background-image: url(../img/sammalkatto1.jpg);
+.parallax__layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
-#section-two {
-  z-index: 3;
+.parallax__layer--base {
+  transform: translateZ(0);
 }
-
-#section-two .parallax__layer--back {
-  background-color: #6c802f;
-}
-
-#section-three {
-  z-index: 4;
-}
-
-#section-three .parallax__layer--base {
-  background-image: url(../img/sammalkatto3.jpg);
-}
+.parallax__layer--back {
+  transform: translateZ(-300px) scale(2);
 }
